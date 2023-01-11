@@ -90,6 +90,10 @@ function App() {
   if(gamefinished){
     console.log(winnerAny);
   }
+  const handleResetGame = () => {
+    setBoard(INITIAL_BOARD);
+    setPlayer(X_PLAYER);
+  }
   return (
     <div className="App">
       <section>
@@ -105,7 +109,7 @@ function App() {
               <span>Active </span>
           }
         </h2>
-        <button className="game--restart">Restart Game</button>
+        <button className="game--restart" onClick={handleResetGame}>Restart Game</button>
     </section>
     </div>
   );
